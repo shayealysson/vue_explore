@@ -26,8 +26,8 @@
       <p>{{ input1 }}</p>
       <hr />
       <!-- 3) Repeat 2) but only output the entered value if the ENTER key was pressed -->
-      <input type="text" />
-      <p>OUTPUT</p>
+      <input type="text" v-on:keydown.enter="setOutputOnEnter"/>
+      <p>{{ input2 }}</p>
     </section>
   </body>
 </html>
