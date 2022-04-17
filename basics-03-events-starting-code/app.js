@@ -3,11 +3,15 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: '',
+      confirmedName: '',
     };
   },
   methods: {
+    confirmInput() {
+      this.confirmedName = this.name;
+    },
     increaseCounter(num) {
-        return this.counter+= num;
+      return this.counter+= num;
     },
     decreaseCounter(num) {
       return this.counter-= num;
