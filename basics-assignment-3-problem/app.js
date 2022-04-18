@@ -5,8 +5,12 @@ const app = Vue.createApp({
       };
     },
     watch: {
-        number(value) {
-            
+        number() {
+            console.log('Running number watcher...');
+            setTimeout(()=>{
+                this.number = 0;
+                console.log('RESETTING NUMBER: '+ this.number);
+            }, 5000);
         }
     },
     computed: {
